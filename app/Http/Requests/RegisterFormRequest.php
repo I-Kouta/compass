@@ -30,6 +30,7 @@ class RegisterFormRequest extends FormRequest
             'under_name_kana' => 'required|string|max:30',
             'mail_address' => 'required|string|email|max:100|unique:users',
             'sex' => 'required|string|between:1,3',
+            'role' => 'required|string|between:1,4',
             'password' => 'required|string|min:8|max:30|confirmed',
         ];
     }
@@ -56,6 +57,9 @@ class RegisterFormRequest extends FormRequest
             'sex.required' => '入力必須です',
             'sex.string' => '形式が異なります',
             'sex.between' => '無効な値です',
+            'role.required' => '入力必須です',
+            'role.string' => '形式が異なります',
+            'role.between' => '無効な値です',
             'password.required' => '入力必須です',
             'password.string' => '形式が異なります',
             'password.min' => '8文字以上入力してください',

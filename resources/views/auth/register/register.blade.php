@@ -173,7 +173,9 @@
           <label style="font-size:13px">教師(英語)</label>
           <input type="radio" name="role" class="other_role role" value="4">
           <label style="font-size:13px" class="other_role">生徒</label>
-          <!-- 役職メッセージここ -->
+          @if($errors->first('role'))
+          <span class="error_message">{{ $errors->first('role') }}</span>
+          @endif
         </div>
         <div class="select_teacher d-none">
           <label class="d-block m-0" style="font-size:13px">選択科目</label>
