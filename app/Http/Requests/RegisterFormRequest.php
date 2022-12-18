@@ -24,13 +24,14 @@ class RegisterFormRequest extends FormRequest
     public function rules()
     {
         return [
-            'over_name' => 'required|max:10'
+            'over_name' => 'required|string|max:10'
         ];
     }
 
     public function messages(){
         return [
             'over_name.required' => '入力必須です',
+            'over_name.string' => '形式が異なります',
             'over_name.max' => '最大10文字までです'
         ];
     }
