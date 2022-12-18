@@ -31,8 +31,8 @@ class RegisterFormRequest extends FormRequest
             'mail_address' => 'required|string|email|max:100|unique:users',
             'sex' => 'required|string|between:1,3',
             'old_year' => 'required|between:2000,2010',
-            'old_month' => 'required|between:1,12',
-            'old_day' => 'required|between:1,31',
+            'old_month' => 'required|between:01,12',
+            'old_day' => 'required|between:01,31',
             'role' => 'required|string|between:1,4',
             'password' => 'required|string|min:8|max:30|confirmed',
         ];
