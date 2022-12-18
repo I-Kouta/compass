@@ -29,6 +29,7 @@ class RegisterFormRequest extends FormRequest
             'over_name_kana' => 'required|string|max:30',
             'under_name_kana' => 'required|string|max:30',
             'mail_address' => 'required|string|email|max:100|unique:users',
+            'password' => 'required|string|min:8|max:30|confirmed',
         ];
     }
 
@@ -51,6 +52,10 @@ class RegisterFormRequest extends FormRequest
             'mail_address.email' => 'アドレス形式で入力してください',
             'mail_address.unique' => '既に登録されているアドレスです',
             'mail_address.max' => '最大100文字までです',
+            'password.required' => '入力必須です',
+            'password.string' => '形式が異なります',
+            'password.min' => '8文字以上入力してください',
+            'password.max' => '最大30文字までです',
         ];
     }
 }
