@@ -60,7 +60,10 @@
           <div class="mt-3">
             <label class="m-0 d-block" style="font-size:13px">メールアドレス</label>
             <div class="border-bottom border-primary">
-              <input type="mail" class="w-100 border-0 mail_address" name="mail_address">
+              <input type="mail" class="w-100 border-0 mail_address" name="mail_address" value="{{ old('mail_address') }}">
+              @if($errors->first('mail_address'))
+              <span class="error_message">{{ $errors->first('mail_address') }}</span>
+              @endif
             </div>
           </div>
         </div>
