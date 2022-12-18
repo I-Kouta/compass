@@ -30,7 +30,10 @@
             <div class="" style="width:140px">
               <label class=" d-block m-0" style="font-size:13px">名</label>
               <div class="border-bottom border-primary" style="width:140px;">
-                <input type="text" style="width:140px;" class="border-0 under_name" name="under_name">
+                <input type="text" style="width:140px;" class="border-0 under_name" name="under_name" value="{{ old('under_name') }}">
+                @if($errors->first('under_name'))
+                <span class="error_message">{{ $errors->first('under_name') }}</span>
+                @endif
               </div>
             </div>
           </div>
