@@ -27,6 +27,7 @@ class RegisterFormRequest extends FormRequest
             'over_name' => 'required|string|max:10',
             'under_name' => 'required|string|max:10',
             'over_name_kana' => 'required|string|max:30',
+            'under_name_kana' => 'required|string|max:30',
         ];
     }
 
@@ -41,6 +42,9 @@ class RegisterFormRequest extends FormRequest
             'over_name_kana.required' => '入力必須です',
             'over_name_kana.string' => '形式が異なります',
             'over_name_kana.max' => '最大30文字までです',
+            'under_name_kana.required' => '入力必須です',
+            'under_name_kana.string' => '形式が異なります',
+            'under_name_kana.max' => '最大30文字までです',
         ];
     }
 }
