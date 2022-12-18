@@ -41,7 +41,10 @@
             <div class="" style="width:140px">
               <label class="d-block m-0" style="font-size:13px">セイ</label>
               <div class="border-bottom border-primary" style="width:140px;">
-                <input type="text" style="width:140px;" class="border-0 over_name_kana" name="over_name_kana">
+                <input type="text" style="width:140px;" class="border-0 over_name_kana" name="over_name_kana" value="{{ old('over_name_kana') }}">
+                @if($errors->first('over_name_kana'))
+                <span class="error_message">{{ $errors->first('over_name_kana') }}</span>
+                @endif
               </div>
             </div>
             <div class="" style="width:140px">
