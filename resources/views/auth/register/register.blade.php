@@ -206,9 +206,9 @@
         <div class="mt-3">
           <label class="d-block m-0" style="font-size:13px">確認用パスワード</label>
           <div class="border-bottom border-primary">
-            <input type="password" class="border-0 w-100 password_confirmation" name="password">
-            @if($errors->first('password'))
-            <span class="error_message">{{ $errors->first('password') }}</span>
+            <input type="password" class="border-0 w-100 password_confirmation" name="password_confirmation">
+            @if($errors->first('password_confirmation'))
+            <span class="error_message">{{ $errors->first('password_confirmation') }}</span>
             @endif
           </div>
         </div>
