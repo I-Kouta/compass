@@ -110,6 +110,9 @@
             <option value="2010">2010</option>
           </select>
           <label style="font-size:13px">年</label>
+          @if($errors->first('old_year'))
+          <span class="error_message">{{ $errors->first('old_year') }}</span>
+          @endif
           <select class="old_month" name="old_month">
             <option value="none">-----</option>
             <option value="01">1</option>
@@ -126,6 +129,9 @@
             <option value="12">12</option>
           </select>
           <label style="font-size:13px">月</label>
+          @if($errors->first('old_month'))
+          <span class="error_message">{{ $errors->first('old_month') }}</span>
+          @endif
           <select class="old_day" name="old_day">
             <option value="none">-----</option>
             <option value="01">1</option>
@@ -161,7 +167,9 @@
             <option value="31">31</option>
           </select>
           <label style="font-size:13px">月</label>
-          <!-- 生年月日メッセージここ -->
+          @if($errors->first('old_day'))
+          <span class="error_message">{{ $errors->first('old_day') }}</span>
+          @endif
         </div>
         <div class="mt-3">
           <label class="d-block m-0" style="font-size:13px">役職</label>
