@@ -166,7 +166,7 @@
             <option value="30">30</option>
             <option value="31">31</option>
           </select>
-          <label style="font-size:13px">月</label>
+          <label style="font-size:13px">日</label>
           @if($errors->first('old_day'))
           <span class="error_message">{{ $errors->first('old_day') }}</span>
           @endif
