@@ -20,6 +20,7 @@ class SubjectsTableSeeder extends Seeder
         Subjects::create([
             'subject' => '数学',
         ]);
+
         Subjects::create([
             'subject' => '英語',
         ]);
