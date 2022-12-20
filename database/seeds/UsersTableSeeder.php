@@ -12,6 +12,16 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-
+        User::create([
+            'over_name' => '',
+            'under_name' => '',
+            'over_name_kana' => '',
+            'under_name_kana' => '',
+            'mail_address' => '',
+            'sex' => '',
+            'birth_day' => '',
+            'role' => '',
+            'password' => '',
+        ]);
     }
 }
