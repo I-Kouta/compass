@@ -21,6 +21,16 @@ class RegisterFormRequest extends FormRequest
      *
      * @return array
      */
+
+    // $this->merge(['key' => $value])を実行すると任意のkeyとvalueの組み合わせをrules()に渡せる
+    public function getValidatorInstance()
+    {
+        // プルダウンで選択された配列値を取得
+        // 日付を作成
+        // rules()に渡す値を追加でセット
+        // この場で変数にもバリデーションを設定できるようになる
+    }
+
     public function rules()
     {
         return [
