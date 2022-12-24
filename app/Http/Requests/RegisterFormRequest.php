@@ -47,12 +47,12 @@ class RegisterFormRequest extends FormRequest
             'under_name_kana' => 'required|string|max:30|regex:/^[ア-ン゛゜ァ-ォャ-ョー]+$/u',
             'mail_address' => 'required|string|email|max:100|unique:users',
             'sex' => 'required|string|between:1,3',
-            'old_year' => 'required|after:2000',
-            'old_month' => 'required|between:01,12',
-            'old_day' => 'required|between:01,31',
+            'old_year' => 'required',
+            'old_month' => 'required',
+            'old_day' => 'required',
             'role' => 'required|string|between:1,4',
             'password' => 'required|string|min:8|max:30|confirmed',
-            'datetime_validation' => 'date',
+            'datetime_validation' => 'date|before:today|after:1999-12-31',
         ];
     }
 
@@ -81,11 +81,8 @@ class RegisterFormRequest extends FormRequest
             'sex.string' => '形式が異なります',
             'sex.between' => '無効な値です',
             'old_year.required' => '入力必須です',
-            'old_year.after' => '無効な年です',
             'old_month.required' => '入力必須です',
-            'old_month.between' => '無効な月です',
             'old_day.required' => '入力必須です',
-            'old_day.between' => '無効な日付です',
             'role.required' => '入力必須です',
             'role.string' => '形式が異なります',
             'role.between' => '無効な値です',
@@ -95,6 +92,8 @@ class RegisterFormRequest extends FormRequest
             'password.max' => '最大30文字までです',
             'password.confirmed' => 'パスワードが一致しません',
             'datetime_validation.date' => '存在しない生年月日です',
+            'datetime_validation.before' => '今日より前の生年月日を入力してください',
+            'datetime_validation.after' => '2000年1月1日以降を入力してください',
         ];
     }
 }
