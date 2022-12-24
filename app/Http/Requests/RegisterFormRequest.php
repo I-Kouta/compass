@@ -79,11 +79,11 @@ class RegisterFormRequest extends FormRequest
             'sex.string' => '形式が異なります',
             'sex.between' => '無効な値です',
             'old_year.required' => '入力必須です',
-            'old_year.after' => '無効な値です',
+            'old_year.after' => '無効な年です',
             'old_month.required' => '入力必須です',
-            'old_month.between' => '無効な値です',
+            'old_month.between' => '無効な月です',
             'old_day.required' => '入力必須です',
-            'old_day.between' => '無効な値です',
+            'old_day.between' => '無効な日付です',
             'role.required' => '入力必須です',
             'role.string' => '形式が異なります',
             'role.between' => '無効な値です',
@@ -92,6 +92,7 @@ class RegisterFormRequest extends FormRequest
             'password.min' => '8文字以上入力してください',
             'password.max' => '最大30文字までです',
             'password.confirmed' => 'パスワードが一致しません',
+            'datetime_validation.date' => '存在しない生年月日です',
         ];
     }
 }
