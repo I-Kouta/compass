@@ -167,10 +167,13 @@
             <option value="31">31</option>
           </select>
           <label style="font-size:13px">日</label>
-          @if($errors->first('old_day'))
-          <span class="error_message">{{ $errors->first('old_day') }}</span>
+          @if($errors->first('datetime_validation'))
+          <span class="error_message">{{ $errors->first('datetime_validation') }}</span>
           @endif
         </div>
+        @if($errors->first('old_day'))
+        <span class="error_message">{{ $errors->first('old_day') }}</span>
+        @endif
         <div class="mt-3">
           <label class="d-block m-0" style="font-size:13px">役職</label>
           <input type="radio" name="role" class="admin_role role" value="1">
