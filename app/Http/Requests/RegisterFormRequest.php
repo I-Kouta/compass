@@ -26,9 +26,14 @@ class RegisterFormRequest extends FormRequest
     public function getValidatorInstance()
     {
         // プルダウンで選択された配列値を取得
+        $datetime = $this->input('datetime', array());
         // 日付を作成
-        // rules()に渡す値を追加でセット
-        // この場で変数にもバリデーションを設定できるようになる
+        $datetime_validation = implode('-', $datetime); // $datetimeを'-'で繋いでいる
+        // rules()に渡す値を追加でセット、この場で変数にもバリデーションを設定できるようになる
+        $this->merge([
+            'datetime_validation' => $datetime_validation,
+        ]);
+        return parent::getValidatorInstance();
     }
 
     public function rules()
