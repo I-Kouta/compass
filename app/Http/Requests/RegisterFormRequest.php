@@ -50,6 +50,7 @@ class RegisterFormRequest extends FormRequest
             'old_day' => 'required|between:01,31',
             'role' => 'required|string|between:1,4',
             'password' => 'required|string|min:8|max:30|confirmed',
+            'datetime_validation' => 'date',
         ];
     }
 
