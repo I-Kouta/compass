@@ -15,5 +15,4 @@ class MainCategory extends Model
     public function subCategories(){
         // リレーションの定義
     }
-
 }
