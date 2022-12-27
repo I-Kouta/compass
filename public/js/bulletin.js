@@ -4,13 +4,14 @@ $(function () {
     $('.category_num' + category_id).slideToggle();
   });
 
-  $(document).on('click', '.like_btn', function (e) {
+  $(document).on('click', '.like_btn', function (e) { // thisは'like_btn'のこと
     e.preventDefault();
     $(this).addClass('un_like_btn');
     $(this).removeClass('like_btn');
-    var post_id = $(this).attr('post_id');
-    var count = $('.like_counts' + post_id).text();
-    var countInt = Number(count);
+    var post_id = $(this).attr('post_id'); // post_id="{{ $post->id }}"を変数に代入している,投稿の特定
+    var count = $('.like_counts' + post_id).text(); // 該当する投稿(post_idで特定)のいいね数をtextで取得
+    var countInt = Number(count); // count変数を数値に変換
+
     $.ajax({
       headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
       method: "post",
@@ -26,13 +27,13 @@ $(function () {
     });
   });
 
-  $(document).on('click', '.un_like_btn', function (e) {
+  $(document).on('click', '.un_like_btn', function (e) { // thisは'un_like_btn'のこと
     e.preventDefault();
     $(this).removeClass('un_like_btn');
     $(this).addClass('like_btn');
-    var post_id = $(this).attr('post_id');
-    var count = $('.like_counts' + post_id).text();
-    var countInt = Number(count);
+    var post_id = $(this).attr('post_id'); // post_id="{{ $post->id }}"を変数に代入している,投稿の特定
+    var count = $('.like_counts' + post_id).text(); // 該当する投稿(post_idで特定)のいいね数をtextで取得
+    var countInt = Number(count); // count変数を数値に変換
 
     $.ajax({
       headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
