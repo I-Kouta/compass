@@ -40,7 +40,7 @@
         <input type="text" class="w-100" name="main_category_name" form="mainCategoryRequest">
         <input type="submit" value="追加" class="w-100 btn btn-primary p-0" form="mainCategoryRequest">
         <p class="m-0">サブカテゴリー</p>
-        <input type="text" class="w-100" name="main_category_name" form="mainCategoryRequest">
+        <select class="w-100" name="main_category_name" form="mainCategoryRequest"></select>
         <input type="submit" value="追加" class="w-100 btn btn-primary p-0" form="mainCategoryRequest">
       </div>
       <!-- サブカテゴリー追加 -->
