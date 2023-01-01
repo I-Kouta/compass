@@ -12,7 +12,7 @@
         <div class="d-flex post_status">
           <div class="mr-5">
             <a href="{{ route('post.detail', ['id' => $post->id]) }}">
-              <i class="fa fa-comment"></i><span class=""></span>
+              <i class="fa fa-comment"></i><span class="">{{ $post->postComments->count() }}</span>
             </a>
           </div>
           <div>
