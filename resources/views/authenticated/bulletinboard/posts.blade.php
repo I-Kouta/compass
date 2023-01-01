@@ -11,7 +11,9 @@
       <div class="post_bottom_area d-flex">
         <div class="d-flex post_status">
           <div class="mr-5">
-            <i class="fa fa-comment"></i><span class=""></span>
+            <a href="{{ route('post.detail', ['id' => $post->id]) }}">
+              <i class="fa fa-comment"></i><span class=""></span>
+            </a>
           </div>
           <div>
             @if(Auth::user()->is_Like($post->id))
