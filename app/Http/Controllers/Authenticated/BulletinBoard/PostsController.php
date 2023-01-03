@@ -33,7 +33,7 @@ class PostsController extends Controller
             ->whereIn('id', $likes)->get();
         }else if($request->my_posts){
             $posts = Post::with('user', 'postComments')
-            ->where('user_id', Auth::id())->get();
+            ->where('user_id', Auth::id())->orderBy('id', 'desc')->get();
         }
         return view('authenticated.bulletinboard.posts', compact('posts', 'categories', 'like', 'post_comment'));
     }
