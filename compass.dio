@@ -4,8 +4,8 @@
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="194" value="ただ、サブカテゴリ入力は&lt;br&gt;必須or任意(確認中)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#FFFFFF;fillColor=none;shadow=0;" vertex="1" parent="1">
-                    <mxGeometry x="-6565" y="-1870" width="160" height="30" as="geometry"/>
+                <mxCell id="194" value="サブカテゴリ入力は必須or任意(確認中)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#FFFFFF;fillColor=none;shadow=0;" vertex="1" parent="1">
+                    <mxGeometry x="-5880" y="-2229" width="230" height="20" as="geometry"/>
                 </mxCell>
                 <mxCell id="28" value="posts" style="shape=table;startSize=20;container=1;collapsible=0;childLayout=tableLayout;fontStyle=1;align=center;pointerEvents=1;" parent="1" vertex="1">
                     <mxGeometry x="-6240" y="-1880" width="280" height="80" as="geometry"/>
@@ -253,7 +253,10 @@
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="193" value="ここが多対多ということは、&lt;br&gt;一つの投稿に複数のサブカテゴリが&lt;br&gt;つけられるということでしょうか。" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#FF0000;fillColor=none;shadow=0;" parent="1" vertex="1">
-                    <mxGeometry x="-6590" y="-1940" width="210" height="50" as="geometry"/>
+                    <mxGeometry x="-6580" y="-2150" width="210" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="195" value="&lt;font style=&quot;font-size: 12px&quot;&gt;メインカテゴリ・サブカテゴリの追加&lt;br&gt;→post_create.blade.phpの&lt;/font&gt;&lt;span style=&quot;background-color: rgb(30 , 30 , 30) ; color: rgb(212 , 212 , 212) ; font-family: &amp;#34;menlo&amp;#34; , &amp;#34;monaco&amp;#34; , &amp;#34;courier new&amp;#34; , monospace&quot;&gt;&lt;font style=&quot;font-size: 12px&quot;&gt;@can('admin')内で行う&lt;/font&gt;&lt;br&gt;&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#FFFFFF;fillColor=none;shadow=0;" vertex="1" parent="1">
+                    <mxGeometry x="-5879" y="-2279" width="300" height="30" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
