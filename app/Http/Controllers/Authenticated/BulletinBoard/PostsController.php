@@ -13,6 +13,7 @@ use App\Models\Users\User;
 use App\Http\Requests\BulletinBoard\PostFormRequest;
 use App\Http\Requests\CommentRequest;
 use App\Http\Requests\MainCategoryFormRequest;
+use App\Http\Requests\SubCategoryFormRequest;
 use Auth;
 
 class PostsController extends Controller
@@ -78,7 +79,7 @@ class PostsController extends Controller
         return redirect()->route('post.input');
     }
 
-    public function subCategoryCreate(Request $request){}
+    public function subCategoryCreate(SubCategoryFormRequest $request){}
 
     public function commentCreate(CommentRequest $request){
         PostComment::create([
