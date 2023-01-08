@@ -13,7 +13,7 @@ class SubCategoryFormRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,14 @@ class SubCategoryFormRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'sub_category' => 'required',
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'sub_category.required' => '入力必須です。',
         ];
     }
 }
