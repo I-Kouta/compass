@@ -74,7 +74,7 @@ class PostsController extends Controller
     }
 
     public function mainCategoryCreate(MainCategoryFormRequest $request){
-        MainCategory::create(['main_category' => $request->main_category_name]);
+        MainCategory::create(['main_category' => $request->main_category]);
         return redirect()->route('post.input');
     }
 

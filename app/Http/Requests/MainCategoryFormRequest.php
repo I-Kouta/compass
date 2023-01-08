@@ -13,7 +13,7 @@ class MainCategoryFormRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,17 @@ class MainCategoryFormRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'main_category' => 'required|max:100|string|unique:main_categories',
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'main_category.required' => '入力必須です。',
+            'main_category.max' => '100文字以内で入力してください。',
+            'main_category.string' => '形式が異なります。',
+            'main_category.unique' => 'すでに存在しているカテゴリーです。',
         ];
     }
 }
