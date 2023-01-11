@@ -24,7 +24,7 @@ class SubCategoryFormRequest extends FormRequest
     public function rules()
     {
         return [
-            'main_category_id' => 'required',
+            'main_category_id' => 'required', // 登録されているメインカテゴリかのバリデーションも追加
             'sub_category' => 'required|max:100|string|unique:main_categories',
         ];
     }
@@ -33,6 +33,7 @@ class SubCategoryFormRequest extends FormRequest
     {
         return [
             'main_category_id.required' => '入力必須です。',
+            // 'main_category_id.----' => '登録されていないメインカテゴリが選択されています。',
             'sub_category.required' => '入力必須です。',
             'sub_category.max' => '100文字以内で入力してください。',
             'sub_category.string' => '形式が異なります。',
