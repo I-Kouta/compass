@@ -26,6 +26,7 @@ class PostFormRequest extends FormRequest
         return [
             'post_title' => 'min:4|max:50',
             'post_body' => 'min:10|max:500',
+            // サブカテゴリが選択されているかのバリデーションも必要
         ];
     }
 

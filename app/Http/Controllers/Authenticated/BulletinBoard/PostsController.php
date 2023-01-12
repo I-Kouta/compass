@@ -53,6 +53,7 @@ class PostsController extends Controller
     }
 
     public function postCreate(PostFormRequest $request){
+        // post_sub_categoriesのcreateにpost_idとsub_category_idも追加？
         $post = Post::create([
             'user_id' => Auth::id(),
             'post_title' => $request->post_title,
