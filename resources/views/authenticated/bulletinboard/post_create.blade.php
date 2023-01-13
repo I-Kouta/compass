@@ -52,13 +52,12 @@
         @if($errors->first('sub_category'))
         <span class="error_message">{{ $errors->first('sub_category') }}</span>
         @endif
-        <select class="w-100" name="sub_category" form="subCategoryRequest">
+        <select class="w-100" name="main_category_id" form="subCategoryRequest">
           <optgroup label>
             <option value="none">----</option>
             @foreach($main_categories as $main_category)
-            <option value>{{ $main_category->main_category }}</option>
+            <option value="{{ $main_category->id }}">{{ $main_category->main_category }}</option>
             @endforeach
-            <input type="hidden" name="main_category_id" form="subCategoryRequest" value="{{ $main_category->id }}">
           </optgroup>
           <input type="text" class="w-100" name="sub_category" form="subCategoryRequest"><!-- サブカテゴリ内容 -->
         </select>
