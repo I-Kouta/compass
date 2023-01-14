@@ -49,6 +49,9 @@
         <form action="{{ route('main.category.create') }}" method="post" id="mainCategoryRequest">{{ csrf_field() }}</form>
 
         <p class="m-0">サブカテゴリー</p><!-- ①メインカテゴリid ②入力したサブカテゴリ -->
+        @if($errors->first('main_category_id'))
+        <span class="error_message">{{ $errors->first('main_category_id') }}</span>
+        @endif
         @if($errors->first('sub_category'))
         <span class="error_message">{{ $errors->first('sub_category') }}</span>
         @endif
