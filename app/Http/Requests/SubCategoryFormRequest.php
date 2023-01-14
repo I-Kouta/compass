@@ -25,7 +25,7 @@ class SubCategoryFormRequest extends FormRequest
     {
         return [
             'main_category_id' => 'required', // 登録されているメインカテゴリかのバリデーションも追加
-            'sub_category' => 'required|max:100|string|unique:main_categories',
+            'sub_category' => 'required|max:100|string|unique:sub_categories',
         ];
     }
 
