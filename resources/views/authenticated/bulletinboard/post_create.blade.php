@@ -11,7 +11,7 @@
         <optgroup label="{{ $main_category->main_category }}"></optgroup>
         <!-- サブカテゴリー表示ここから -->
         @foreach($sub_categories as $sub_category)
-        <optgroup label="{{ $sub_category->sub_category }}"></optgroup>
+        <option value="{{ $sub_category->sub_id }}">{{ $sub_category->sub_category }}</option>
         @endforeach
         <!-- サブカテゴリー表示ここまで -->
         @endforeach
@@ -56,12 +56,10 @@
         <span class="error_message">{{ $errors->first('sub_category') }}</span>
         @endif
         <select class="w-100" name="main_category_id" form="subCategoryRequest">
-          <optgroup label>
-            <option value="">----</option>
-            @foreach($main_categories as $main_category)
-            <option value="{{ $main_category->id }}">{{ $main_category->main_category }}</option>
-            @endforeach
-          </optgroup>
+          <option value="">----</option>
+          @foreach($main_categories as $main_category)
+          <option value="{{ $main_category->id }}">{{ $main_category->main_category }}</option>
+          @endforeach
           <input type="text" class="w-100" name="sub_category" form="subCategoryRequest"><!-- サブカテゴリ内容 -->
         </select>
         <input type="submit" value="追加" class="w-100 btn btn-primary p-0" form="subCategoryRequest">
