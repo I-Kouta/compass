@@ -54,7 +54,7 @@
         @endif
         <select class="w-100" name="main_category_id" form="subCategoryRequest">
           <optgroup label>
-            <option value="none">----</option>
+            <option value="">----</option>
             @foreach($main_categories as $main_category)
             <option value="{{ $main_category->id }}">{{ $main_category->main_category }}</option>
             @endforeach
