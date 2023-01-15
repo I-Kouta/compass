@@ -39,6 +39,10 @@
         @foreach($categories as $category)
         <li class="main_categories" category_id="{{ $category->id }}"><span>{{ $category->main_category }}<span></li>
         <!-- サブカテゴリもプルダウンで実装 -->
+        @foreach($category->subCategories as $sub_category)
+        <li class="main_categories" category_id="{{ $sub_category->id }}"><span>{{ $sub_category->sub_category }}<span></li>
+        @endforeach
+        <!-- サブカテゴリもプルダウンで実装 -->
         @endforeach
       </ul>
     </div>
