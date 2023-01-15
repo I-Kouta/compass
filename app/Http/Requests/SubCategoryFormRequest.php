@@ -33,7 +33,7 @@ class SubCategoryFormRequest extends FormRequest
     {
         return [
             'main_category_id.required' => 'メインカテゴリの入力は必須です。',
-            'main_category_id.exists' => '存在しないメインカテゴリが選択されています。',
+            'main_category_id.exists' => '存在しないメインカテゴリーが選択されています。',
             'sub_category.required' => 'サブカテゴリーの入力は必須です。',
             'sub_category.max' => '100文字以内で入力してください。',
             'sub_category.string' => '形式が異なります。',
