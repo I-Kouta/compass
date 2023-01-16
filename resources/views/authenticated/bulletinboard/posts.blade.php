@@ -24,7 +24,7 @@
         </div>
       </div>
       @foreach($post->subCategories as $category)
-      {{ $category->sub_category }}
+      <span class="category_btn">{{ $category->sub_category }}</span>
       @endforeach
     </div>
     @endforeach
