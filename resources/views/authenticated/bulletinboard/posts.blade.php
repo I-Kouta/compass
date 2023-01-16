@@ -40,7 +40,10 @@
       <input type="submit" name="my_posts" class="category_btn" value="自分の投稿" form="postSearchRequest">
       <ul>
         @foreach($categories as $category)
-        <li class="main_categories" category_id="{{ $category->id }}"><span>{{ $category->main_category }}<span></li>
+        <li class="main_categories" category_id="{{ $category->id }}">
+          <span class="slide-button down"></span>
+          <span>{{ $category->main_category }}</span>
+        </li>
         <!-- サブカテゴリもプルダウンで実装 -->
         @foreach($category->subCategories as $sub_category)
         <p class="main_categories" category_id="{{ $sub_category->id }}"><a href="">{{ $sub_category->sub_category }}</a></p>
