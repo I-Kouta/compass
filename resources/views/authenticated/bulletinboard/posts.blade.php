@@ -21,6 +21,10 @@
             <p class="m-0"><i class="fas fa-heart like_btn" post_id="{{ $post->id }}"></i><span class="like_counts{{ $post->id }}">{{ $like->likeCounts($post->id) }}</span></p>
             @endif
           </div>
+          <!-- $post->subCategories：該当するサブカテゴリ、ポストサブカテゴリテーブルの全情報を取得できる -->
+          @if($post->subCategories()->count() != 0)
+          {{ $post->subCategories()->count() }}
+          @endif
         </div>
       </div>
     </div>
