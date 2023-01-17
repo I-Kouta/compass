@@ -1,7 +1,8 @@
 $(function () {
-  $('.main_categories').click(function () {
-    var category_id = $(this).attr('category_id');
-    $('.category_num' + category_id).slideToggle();
+  $('.slide-button').click(function () {
+    $(this).toggleClass('active');
+    var category_id = $(this).attr('category_id'); // category_id="{{ $category->id }}"を変数に代入
+    $('.category_num' + category_id).slideToggle('active'); // 該当するcategory_idを'category_num'クラスに付与
   });
 
   $(document).on('click', '.like_btn', function (e) { // thisは'like_btn'のこと
