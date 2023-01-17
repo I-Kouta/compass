@@ -201,17 +201,21 @@ li{
 
 .slide-button{
   position: absolute;
-    display: block;
-    margin-left: 150px;
-    width: 20px;
-    height: 20px;
-    border-left: 2px solid #696969;
-    cursor: pointer;
+  display: block;
+  margin-left: 150px;
+  width: 20px;
+  height: 20px;
+  border-left: 2px solid #696969;
+  cursor: pointer;
 }
 
 .down{
   border-bottom: 2px solid #696969;
   -webkit-transform: rotate(-45deg); /* 反時計回り\/ */
+}
+
+.slide-button.active {
+  -webkit-transform: rotate(135deg); /* 時計回り\/ */
 }
 
 /* ユーザー検索 */
