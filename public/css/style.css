@@ -215,6 +215,7 @@ li{
 }
 
 .slide-button.active {
+  margin-top: 10px;
   -webkit-transform: rotate(135deg); /* 時計回り\/ */
 }
 

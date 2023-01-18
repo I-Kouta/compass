@@ -41,7 +41,7 @@
       <ul>
         @foreach($categories as $category)
         <li class="main_categories" category_id="{{ $category->id }}">
-          <span class="slide-button down"></span>
+          <span class="slide-button down slide_num{{ $category->id }}"></span>
           <span>{{ $category->main_category }}</span>
         </li>
         <!-- サブカテゴリもプルダウンで実装 -->
