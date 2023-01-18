@@ -46,7 +46,7 @@
         </li>
         <!-- サブカテゴリもプルダウンで実装 -->
         @foreach($category->subCategories as $sub_category)
-        <p class="sub_categories category_num{{ $sub_category->id }}"><a href="">{{ $sub_category->sub_category }}</a></p>
+        <p class="sub_categories category_num{{ $sub_category->main_category_id }}"><a href="">{{ $sub_category->sub_category }}</a></p>
         @endforeach
         <!-- サブカテゴリもプルダウンで実装 -->
         @endforeach
