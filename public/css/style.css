@@ -206,11 +206,8 @@ li{
   width: 20px;
   height: 20px;
   border-left: 2px solid #696969;
-  cursor: pointer;
-}
-
-.down{
   border-bottom: 2px solid #696969;
+  cursor: pointer;
   -webkit-transform: rotate(-45deg); /* 反時計回り\/ */
 }
 
