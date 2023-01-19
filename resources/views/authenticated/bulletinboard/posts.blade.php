@@ -23,6 +23,7 @@
           </div>
         </div>
       </div>
+      <!-- 空を想定したif文は必要でしょうか。スクールで聞きます -->
       @foreach($post->subCategories as $category)
       <span class="category_btn">{{ $category->sub_category }}</span>
       @endforeach

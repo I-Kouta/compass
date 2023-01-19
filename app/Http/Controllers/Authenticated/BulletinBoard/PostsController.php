@@ -72,6 +72,7 @@ class PostsController extends Controller
 
     public function postDelete($id){
         Post::findOrFail($id)->delete();
+        // このとき、投稿に紐づいているコメントといいねは削除不要ですか。スクールで聞きます
         return redirect()->route('post.show');
     }
 

@@ -2,6 +2,7 @@ $(function () {
   $('.main_categories').click(function () {
     var category_id = $(this).attr('category_id'); // category_id="{{ $category->id }}"を変数に代入
     $('.slide_num' + category_id).toggleClass('active');
+    // 条件分岐、必要ないかも。スクールで聞きます
     if ($(this).hasClass('active')) {
       $('.category_num' + category_id).slideToggle('active'); // 該当するcategory_idを'category_num'クラスに付与
     } else {
