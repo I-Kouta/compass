@@ -23,18 +23,18 @@ class PostsController extends Controller
         $categories = MainCategory::get();
         $like = new Like;
         $post_comment = new Post;
-        if(!empty($request->keyword)){
+        if(!empty($request->keyword)){ // キーワード検査欄が空でない場合
             $posts = Post::with('user', 'postComments')
             ->where('post_title', 'like', '%'.$request->keyword.'%')
             ->orWhere('post', 'like', '%'.$request->keyword.'%')->get();
-        }else if($request->category_word){
+        }else if($request->category_word){ // カテゴリーワードが送られてきている場合
             $sub_category = $request->category_word;
             $posts = Post::with('user', 'postComments')->get();
-        }else if($request->like_posts){
+        }else if($request->like_posts){ // いいねした投稿
             $likes = Auth::user()->likePostId()->get('like_post_id');
             $posts = Post::with('user', 'postComments')
             ->whereIn('id', $likes)->get();
-        }else if($request->my_posts){
+        }else if($request->my_posts){ // 自分の投稿
             $posts = Post::with('user', 'postComments')
             ->where('user_id', Auth::id())->orderBy('id', 'desc')->get();
         }
