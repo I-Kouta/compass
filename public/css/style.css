@@ -216,6 +216,13 @@ li{
   -webkit-transform: rotate(135deg); /* 時計回り\/ */
 }
 
+.sub_categories_name{
+  background: none;
+  border: none;
+  color: #4169e1;
+  cursor: pointer;
+}
+
 /* ユーザー検索 */
 .reserve_users_area{
   display:flex;
