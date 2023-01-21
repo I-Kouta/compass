@@ -44,14 +44,11 @@
           <span class="slide-button slide_num{{ $category->id }}"></span>
           <span>{{ $category->main_category }}</span>
         </li>
-        <!-- サブカテゴリもプルダウンで実装 -->
         @foreach($category->subCategories as $sub_category)
         <p class="sub_categories category_num{{ $sub_category->main_category_id }}">
-          <!-- <a href="">{{ $sub_category->sub_category }}</a> -->
           <input type="submit" class="sub_categories_name" name="category_word" value="{{ $sub_category->sub_category }}" form="postSearchRequest">
         </p>
         @endforeach
-        <!-- サブカテゴリもプルダウンで実装 -->
         @endforeach
       </ul>
     </div>
