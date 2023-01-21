@@ -23,7 +23,6 @@
           </div>
         </div>
       </div>
-      <!-- 空を想定したif文は必要でしょうか。スクールで聞きます -->
       @foreach($post->subCategories as $category)
       <span class="category_btn">{{ $category->sub_category }}</span>
       @endforeach
@@ -47,7 +46,10 @@
         </li>
         <!-- サブカテゴリもプルダウンで実装 -->
         @foreach($category->subCategories as $sub_category)
-        <p class="sub_categories category_num{{ $sub_category->main_category_id }}"><a href="">{{ $sub_category->sub_category }}</a></p>
+        <p class="sub_categories category_num{{ $sub_category->main_category_id }}">
+          <!-- <a href="">{{ $sub_category->sub_category }}</a> -->
+          <input type="submit" name="category_word" value="{{ $sub_category->sub_category }}" form="postSearchRequest">
+        </p>
         @endforeach
         <!-- サブカテゴリもプルダウンで実装 -->
         @endforeach
