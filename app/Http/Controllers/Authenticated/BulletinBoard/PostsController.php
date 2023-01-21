@@ -29,7 +29,10 @@ class PostsController extends Controller
             ->orWhere('post', 'like', '%'.$request->keyword.'%')->get();
         }else if($request->category_word){ // カテゴリーワードが送られてきている場合
             $sub_category = $request->category_word;
-            $posts = Post::with('user', 'postComments')->get();
+            $posts = Post::with('user', 'postComments')
+            ->whereHas('subCategories', function ($q) use ($sub_category) {
+                $q->where('sub_category', '=', $sub_category);
+            })->get();
         }else if($request->like_posts){ // いいねした投稿
             $likes = Auth::user()->likePostId()->get('like_post_id');
             $posts = Post::with('user', 'postComments')
