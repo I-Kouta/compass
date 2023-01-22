@@ -94,7 +94,7 @@
             @foreach($subjects as $subject)
             <div class="">
               <label>{{ $subject->subject }}</label>
-              <input type="checkbox" name="subject[]" value="{{ $subject->id }}">
+              <input type="checkbox" name="subject" value="{{ $subject->id }}">
             </div>
             @endforeach
           </div>
