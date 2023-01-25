@@ -23,6 +23,14 @@ class UsersController extends Controller
         $role = $request->role;
         $subjects = $request->subject;// ここで検索時の科目を受け取る
         // dd($subjects); // array:3[0=>"1",1=>"2",2=>"3"]
+        if(is_array($request->input('subject'))){
+            $query = Subjects::query();
+            $query->where(function($q) use($request){
+                foreach($request->input('subject') as $subjects){
+                    $q->orWhere('subject',$subjects);
+                }
+            });
+        }
         $userFactory = new SearchResultFactories();
         $users = $userFactory->initializeUsers($keyword, $category, $updown, $gender, $role, $subjects);
         $subjects = Subjects::all();
