@@ -34,5 +34,4 @@ class SelectNameDetails implements DisplayUsers{
     ->orderBy('over_name_kana', $updown)->get();
     return $users;
   }
-
 }

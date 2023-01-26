@@ -32,5 +32,4 @@ class SelectIds implements DisplayUsers{
     }
     return $users;
   }
-
 }
