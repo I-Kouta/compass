@@ -34,5 +34,4 @@ class SelectIdDetails implements DisplayUsers{
     ->orderBy('id', $updown)->get();
     return $users;
   }
-
 }
