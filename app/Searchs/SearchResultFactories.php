@@ -11,6 +11,7 @@ class SearchResultFactories{
       if(is_null($subjects)){
         $searchResults = new SelectNames();
       }else{
+        // dd($subjects); // ここをarray:3が通っている
         $searchResults = new SelectNameDetails();
       }
       return $searchResults->resultUsers($keyword, $category, $updown, $gender, $role, $subjects);
