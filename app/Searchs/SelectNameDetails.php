@@ -30,7 +30,7 @@ class SelectNameDetails implements DisplayUsers{
     })
     ->whereHas('subjects', function($q) use ($subjects){
       // dd($subjects); // ここをarray:3が通っている
-      $q->where('subject_users.subject_id', $subjects);
+      $q->where('subjects.id', $subjects);
     })
     ->orderBy('over_name_kana', $updown)->get();
     return $users;
