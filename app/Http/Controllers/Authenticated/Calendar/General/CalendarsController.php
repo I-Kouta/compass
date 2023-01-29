@@ -13,7 +13,7 @@ use DB;
 
 class CalendarsController extends Controller
 {
-    public function show(){ // スクール予約確認のビュー
+    public function show(){ // スクール予約のビュー
         $calendar = new CalendarView(time());
         return view('authenticated.calendar.general.calendar', compact('calendar'));
     }
