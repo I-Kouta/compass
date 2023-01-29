@@ -13,12 +13,12 @@ use DB;
 
 class CalendarsController extends Controller
 {
-    public function show(){
+    public function show(){ // スクール予約確認のビュー
         $calendar = new CalendarView(time());
         return view('authenticated.calendar.general.calendar', compact('calendar'));
     }
 
-    public function reserve(Request $request){
+    public function reserve(Request $request){ // 予約完了時の操作
         DB::beginTransaction();
         try{
             $getPart = $request->getPart;
