@@ -2,7 +2,7 @@
 namespace App\Calendars\Admin;
 use Carbon\Carbon;
 use App\Models\Users\User;
-
+// スクール予約確認はここを参照している
 class CalendarView{
   private $carbon;
 
