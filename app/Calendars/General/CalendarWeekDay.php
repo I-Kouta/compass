@@ -48,6 +48,7 @@ class CalendarWeekDay{
     }
 
     $html = [];
+    // ここがスクール予約のプルダウンの記述、過去未来の区別はない
     $html[] = '<select name="getPart[]" class="border-primary" style="width:70px; border-radius:5px;" form="reserveParts">';
     $html[] = '<option value="" selected></option>';
     if($one_part_frame == "0"){

@@ -31,7 +31,7 @@ class CalendarView{
     $html[] = '</tr>';
     $html[] = '</thead>';
     $html[] = '<tbody>';
-    $weeks = $this->getWeeks();
+    $weeks = $this->getWeeks(); // getWeeksメソッドは下にあります
     foreach($weeks as $week){
       $html[] = '<tr class="'.$week->getClassName().'">';
 
@@ -43,7 +43,7 @@ class CalendarView{
         if($startDay <= $day->everyDay() && $toDay >= $day->everyDay()){
           $html[] = '<td class="past-day calendar-td">';
         }else{
-          $html[] = '<td class="calendar-td '.$day->getClassName().'">';
+          $html[] = '<td class="calendar-td '.$day->getClassName().'">'; // 日付が書かれていないグレーな部分
         }
         $html[] = $day->render();
 
