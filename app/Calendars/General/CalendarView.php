@@ -50,7 +50,7 @@ class CalendarView{
         if(in_array($day->everyDay(), $day->authReserveDay())){
           $reservePart = $day->authReserveDate($day->everyDay())->first()->setting_part;
           if($reservePart == 1){
-            $reservePart = "リモ1部";
+            $reservePart = "リモ1部"; // 参加予定の記述？、つまり未来
           }else if($reservePart == 2){
             $reservePart = "リモ2部";
           }else if($reservePart == 3){

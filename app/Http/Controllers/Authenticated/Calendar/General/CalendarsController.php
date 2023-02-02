@@ -13,12 +13,12 @@ use DB;
 
 class CalendarsController extends Controller
 {
-    public function show(){ // スクール予約のビュー
+    public function show(){ // スクール予約のビュー'calendar.general.show'
         $calendar = new CalendarView(time());
         return view('authenticated.calendar.general.calendar', compact('calendar'));
     }
 
-    public function reserve(Request $request){ // 予約完了時の操作
+    public function reserve(Request $request){ // 予約完了時の操作'reserveParts'
         DB::beginTransaction();
         try{
             $getPart = $request->getPart;
@@ -26,7 +26,7 @@ class CalendarsController extends Controller
             $reserveDays = array_filter(array_combine($getDate, $getPart));
             foreach($reserveDays as $key => $value){
                 $reserve_settings = ReserveSettings::where('setting_reserve', $key)->where('setting_part', $value)->first();
-                $reserve_settings->decrement('limit_users');
+                $reserve_settings->decrement('limit_users'); // limit_usersカラムの値を1つ減らす
                 $reserve_settings->users()->attach(Auth::id());
             }
             DB::commit();
