@@ -29,7 +29,6 @@ class CalendarWeekDay{
 
   function selectPart($ymd){ // $ymdに日付が入っている
     $one_part_frame = ReserveSettings::with('users')->where('setting_reserve', $ymd)->where('setting_part', '1')->first(); // 日付と部数の取得
-    // dd($one_part_frame); // null
     $two_part_frame = ReserveSettings::with('users')->where('setting_reserve', $ymd)->where('setting_part', '2')->first();
     $three_part_frame = ReserveSettings::with('users')->where('setting_reserve', $ymd)->where('setting_part', '3')->first();
     if($one_part_frame){

@@ -21,13 +21,13 @@ class CalendarsController extends Controller
     public function reserve(Request $request){ // 予約完了時の操作'reserveParts'
         DB::beginTransaction();
         try{
-            $getPart = $request->getPart;
+            $getPart = $request->getPart; // 1,2,3部
             $getDate = $request->getData;
             $reserveDays = array_filter(array_combine($getDate, $getPart));
             foreach($reserveDays as $key => $value){
                 $reserve_settings = ReserveSettings::where('setting_reserve', $key)->where('setting_part', $value)->first();
                 $reserve_settings->decrement('limit_users'); // limit_usersカラムの値を1つ減らす
-                $reserve_settings->users()->attach(Auth::id());
+                $reserve_settings->users()->attach(Auth::id()); // 中間テーブルに保存する記述
             }
             DB::commit();
         }catch(\Exception $e){
