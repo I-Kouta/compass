@@ -40,7 +40,7 @@ class CalendarView{
         $startDay = $this->carbon->copy()->format("Y-m-01");
         $toDay = $this->carbon->copy()->format("Y-m-d");
 
-        if($startDay <= $day->everyDay() && $toDay >= $day->everyDay()){ // 今日より前の場合
+        if($startDay <= $day->everyDay() && $toDay > $day->everyDay()){ // 今日より前の場合
           $html[] = '<td class="past-day calendar-td">';
         }else{
           $html[] = '<td class="calendar-td '.$day->getClassName().'">'; // 日付が書かれていないグレーな部分
@@ -56,7 +56,7 @@ class CalendarView{
           }else if($reservePart == 3){
             $reservePart = "リモ3部";
           }
-          if($startDay <= $day->everyDay() && $toDay >= $day->everyDay()){ // 過去日
+          if($startDay <= $day->everyDay() && $toDay > $day->everyDay()){ // 過去日
             $html[] = '<p class="m-auto p-0 w-75" style="font-size:12px"></p>'; // 参加した部を表示したい
             $html[] = '<input type="hidden" name="getPart[]" value="" form="reserveParts">';
           }else{ // 参加した部を表示させるけどキャンセルへ遷移
@@ -64,7 +64,7 @@ class CalendarView{
             $html[] = '<input type="hidden" name="getPart[]" value="" form="reserveParts">';
           }
         }else{ // 予約していない
-          if($startDay <= $day->everyDay() && $toDay >= $day->everyDay()){ // 過去日
+          if($startDay <= $day->everyDay() && $toDay > $day->everyDay()){ // 過去日
             $html[] = '<p class="m-auto p-0 w-75" style="font-size:12px">受付終了</p>';
             // $html[] = '<input type="hidden" name="getPart[]" value="" form="reserveParts">'; // どうやら必要らしいけど
           }else{ // 明日以降はプルダウンを表示させる
