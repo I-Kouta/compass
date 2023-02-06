@@ -47,7 +47,7 @@ class CalendarWeekDay{
       $three_part_frame = '0';
     }
 
-    $html = [];
+    $html = []; // ここ以降で1,2,3部を送っている
     $html[] = '<select name="getPart[]" class="border-primary" style="width:70px; border-radius:5px;" form="reserveParts">';
     $html[] = '<option value="" selected></option>';
     if($one_part_frame == "0"){
@@ -69,7 +69,7 @@ class CalendarWeekDay{
     return implode('', $html);
   }
 
-  function getDate(){
+  function getDate(){ // ここで予約の日付を送っている
     return '<input type="hidden" value="'. $this->carbon->format('Y-m-d') .'" name="getData" form="reserveParts">';
   }
 

@@ -22,7 +22,7 @@ class CalendarsController extends Controller
         DB::beginTransaction();
         try{
             $getPart = $request->getPart; // 1,2,3部
-            $getDate = $request->getData;
+            $getDate = $request->getData; // 20xx-xx-xx年月日
             $reserveDays = array_filter(array_combine($getDate, $getPart));
             foreach($reserveDays as $key => $value){
                 $reserve_settings = ReserveSettings::where('setting_reserve', $key)->where('setting_part', $value)->first();
