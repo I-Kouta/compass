@@ -69,8 +69,8 @@ class CalendarWeekDay{
     return implode('', $html);
   }
 
-  function getDate(){ // ここで予約の日付を送っている
-    return '<input type="hidden" value="'. $this->carbon->format('Y-m-d') .'" name="getData" form="reserveParts">';
+  function getDate(){ // ここで予約の日付を送っている,value属性は年月日を繰り返している?
+    return '<input type="hidden" value="'. $this->carbon->format('Y-m-d') .'" name="getData[]" form="reserveParts">';
   }
 
   function everyDay(){
