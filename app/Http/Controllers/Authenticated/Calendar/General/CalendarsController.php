@@ -26,7 +26,6 @@ class CalendarsController extends Controller
             $getPart = $request->getPart; // 1,2,3部
             // ↓[20xx-xx-xx]=>1,みたいに連想配列を返す
             $reserveDays = array_filter(array_combine($getDate, $getPart));
-            dd($reserveDays);
             foreach($reserveDays as $key => $value){
                 $reserve_settings = ReserveSettings::where('setting_reserve', $key)->where('setting_part', $value)->first();
                 $reserve_settings->decrement('limit_users'); // limit_usersカラムの値を1つ減らす
