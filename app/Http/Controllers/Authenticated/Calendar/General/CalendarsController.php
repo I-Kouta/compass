@@ -38,5 +38,7 @@ class CalendarsController extends Controller
         return redirect()->route('calendar.general.show', ['user_id' => Auth::id()]);
     }
 
-    public function delete(){}
+    public function delete(){
+        return redirect()->route('post.show');
+    }
 }
