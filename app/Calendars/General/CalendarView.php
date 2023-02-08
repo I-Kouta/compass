@@ -50,17 +50,19 @@ class CalendarView{
         if(in_array($day->everyDay(), $day->authReserveDay())){ // 予約している場合
           $reservePart = $day->authReserveDate($day->everyDay())->first()->setting_part;
           if($reservePart == 1){
-            $reservePart = "リモ1部"; // 過去の参加した内容を表示させる？
+            $reservePart = "リモ1部"; // これから参加する箇所の表示
           }else if($reservePart == 2){
             $reservePart = "リモ2部";
           }else if($reservePart == 3){
             $reservePart = "リモ3部";
           }
           if($startDay <= $day->everyDay() && $toDay > $day->everyDay()){ // 過去日
-            $html[] = '<p class="m-auto p-0 w-75" style="font-size:12px"></p>'; // 参加した部を表示したい
+            $html[] =
+            '<p class="m-auto p-0 w-75" style="font-size:12px">'.$reservePart.'</p>'; // 参加した部を表示したい
             $html[] = '<input type="hidden" name="getPart[]" value="" form="reserveParts">';
-          }else{ // 参加した部を表示させるけどキャンセルへ遷移
+          }else{ // 参加する部を表示させる、キャンセルへ遷移
             $html[] = '<button type="submit" class="btn btn-danger p-0 w-75" name="delete_date" style="font-size:12px" value="'. $day->authReserveDate($day->everyDay())->first()->setting_reserve .'">'. $reservePart .'</button>';
+            // ↓ここをdeletePartsに変えると予約がされなくなった
             $html[] = '<input type="hidden" name="getPart[]" value="" form="reserveParts">';
           }
         }else{ // 予約していない
