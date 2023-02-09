@@ -19,7 +19,7 @@ class CalendarsController extends Controller
     }
 
     public function reserve(Request $request){ // 予約完了時の操作'reserveParts'
-        // dd($request->getData);
+        dd($request);
         DB::beginTransaction();
         try{
             $getDate = $request->getData; // 20xx-xx-xx,年月日
@@ -38,5 +38,7 @@ class CalendarsController extends Controller
         return redirect()->route('calendar.general.show', ['user_id' => Auth::id()]);
     }
 
-    public function delete(){}
+    public function delete(Request $request){
+        dd($request); // 値を減らすメソッドはincrement
+    }
 }

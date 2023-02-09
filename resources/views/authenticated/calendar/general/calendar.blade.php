@@ -30,7 +30,7 @@
         </div>
         <div class="w-50 m-auto edit-modal-btn d-flex">
           <a class="js-modal-close btn btn-danger d-inline-block" href="">CLOSE</a>
-          <input type="submit" class="btn btn-primary d-block" onclick="return confirm('予約をキャンセルします。よろしいでしょうか？')" value="OK">
+          <input type="submit" class="btn btn-primary d-block" onclick="return confirm('予約をキャンセルします。よろしいでしょうか？')" value="OK" form="deleteParts">
         </div>
       </div>
       {{ csrf_field() }}
