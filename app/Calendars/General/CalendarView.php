@@ -66,7 +66,6 @@ class CalendarView{
             name="delete_date" style="font-size:12px"
             setting_reserve="日付：'. $this->carbon->format('Y-m-d') .'"
             setting_part="参加部：'.$reservePart.'"
-            reserve_setting_id=""
             value="'. $day->authReserveDate($day->everyDay())->first()->setting_reserve .'">'
             .$reservePart.
             '</button>';
