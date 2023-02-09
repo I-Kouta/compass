@@ -20,7 +20,7 @@
 <div class="modal js-modal">
   <div class="modal__bg js-modal-close"></div>
   <div class="modal__content">
-    <form action="{{ route('post.edit') }}" method="post">
+    <form action="{{ route('deleteParts') }}" method="post">
       <div class="w-100">
         <div class="modal-inner-reserve w-50 m-auto">
           <p name="setting_reserve" class="m-auto p-0 w-75">
