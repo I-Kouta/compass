@@ -24,9 +24,11 @@
       <div class="w-100">
         <div class="modal-inner-reserve w-50 m-auto">
           <p name="setting_reserve" class="m-auto p-0 w-75"></p>
+          <input type="hidden" class="cancel-reserve-hidden" name="cancel_reserve">
         </div>
         <div class="modal-inner-part w-50 m-auto pt-3 pb-3">
           <p name="setting_part" class="m-auto p-0 w-75"></p>
+          <input type="hidden" class="cancel-part-hidden" name="cancel_part">
         </div>
         <div class="w-50 m-auto pb-3">
           <p class="m-auto p-0 w-75">上記の予約をキャンセルしてもよろしいですか？</p>

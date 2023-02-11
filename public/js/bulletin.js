@@ -66,10 +66,12 @@ $(function () {
 
   $('.cancel-modal-open').on('click', function () {
     $('.js-modal').fadeIn();
-    var setting_reserve = $(this).attr('setting_reserve');
-    var setting_part = $(this).attr('setting_part');
+    var setting_reserve = $(this).attr('cancel_reserve');
+    var setting_part = $(this).attr('cancel_part');
     $('.modal-inner-reserve p').text(setting_reserve);
     $('.modal-inner-part p').text(setting_part);
+    $('.cancel-reserve-hidden').val(cancel_reserve);
+    $('.cancel-part-hidden').val(cancel_part);
     return false;
   });
   $('.js-modal-close').on('click', function () {
