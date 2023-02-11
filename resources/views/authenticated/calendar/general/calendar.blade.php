@@ -32,8 +32,8 @@
           <p class="m-auto p-0 w-75">上記の予約をキャンセルしてもよろしいですか？</p>
         </div>
         <div class="w-50 m-auto edit-modal-btn d-flex">
-          <a class="js-modal-close btn btn-danger d-inline-block" href="">CLOSE</a>
-          <input type="submit" class="btn btn-primary d-block" onclick="return confirm('予約をキャンセルします。よろしいでしょうか？')" value="OK">
+          <a class="js-modal-close btn btn-danger d-inline-block" href="">閉じる</a>
+          <input type="submit" class="btn btn-primary d-block" onclick="return confirm('予約をキャンセルします。よろしいでしょうか？')" value="キャンセル">
         </div>
       </div>
       {{ csrf_field() }}

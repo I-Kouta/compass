@@ -65,8 +65,8 @@ class CalendarView{
             class="cancel-modal-open btn btn-danger p-0 w-75"
             name="delete_date" style="font-size:12px"
             setting_reserve="日付：'.$day->authReserveDate($day->everyDay())->first()->setting_reserve.'"
-            setting_part="時間：'.$reservePart.'">'
-            .$reservePart.
+            setting_part="時間：'.$reservePart.'">
+            '.$reservePart.
             '</button>';
             $html[] = '<input type="hidden" name="getPart[]" value="" form="reserveParts">';
             // ↑ここをdeletePartsに変えると予約がされなくなった
