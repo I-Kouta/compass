@@ -66,11 +66,14 @@ $(function () {
 
   $('.cancel-modal-open').on('click', function () {
     $('.js-modal').fadeIn();
+    //表示させる値は文字を結合すること
+    var setting_reserve_view = $(this).attr('cancel_reserve_view');
     var setting_reserve = $(this).attr('cancel_reserve');
+    var setting_part_view = $(this).attr('cancel_part_view');
     var setting_part = $(this).attr('cancel_part');
-    $('.modal-inner-reserve p').text(setting_reserve);
-    $('.modal-inner-part p').text(setting_part);
+    $('.modal-inner-reserve p').text(setting_reserve_view);
     $('.cancel-reserve-hidden').val(setting_reserve);
+    $('.modal-inner-part p').text(setting_part_view);
     $('.cancel-part-hidden').val(setting_part);
     return false;
   });
