@@ -70,8 +70,8 @@ $(function () {
     var setting_part = $(this).attr('cancel_part');
     $('.modal-inner-reserve p').text(setting_reserve);
     $('.modal-inner-part p').text(setting_part);
-    $('.cancel-reserve-hidden').val(cancel_reserve);
-    $('.cancel-part-hidden').val(cancel_part);
+    $('.cancel-reserve-hidden').val(setting_reserve);
+    $('.cancel-part-hidden').val(setting_part);
     return false;
   });
   $('.js-modal-close').on('click', function () {
