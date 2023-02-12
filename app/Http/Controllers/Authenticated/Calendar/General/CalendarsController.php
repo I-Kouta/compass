@@ -40,5 +40,13 @@ class CalendarsController extends Controller
 
     public function delete(Request $request){
         dd($request); // 値を減らすメソッドはincrement
+        DB::beginTransaction();
+        try{
+            $getDate = $request->cancel_reserve;
+            $getPart = $request->cancel_part;
+        }catch(\Exception $e){
+            DB::rollback();
+        }
+        return redirect()->route('calendar.general.show', ['user_id' => Auth::id()]);
     }
 }
