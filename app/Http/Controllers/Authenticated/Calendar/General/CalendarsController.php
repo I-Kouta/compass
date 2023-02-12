@@ -47,6 +47,8 @@ class CalendarsController extends Controller
             $reserve_settings = ReserveSettings::where('setting_reserve', $getDate)->where('setting_part', $getPart)->first();
             // dd($reserve_settings);
             $reserve_settings->increment('limit_users');
+            $reserve_settings->users()->detach(Auth::id()); // 中間テーブルに保存する記述
+            DB::commit();
         }catch(\Exception $e){
             DB::rollback();
         }
