@@ -19,7 +19,6 @@ class CalendarsController extends Controller
     }
 
     public function reserve(Request $request){ // 予約完了時の操作'reserveParts'
-        dd($request);
         DB::beginTransaction();
         try{
             $getDate = $request->getData; // 20xx-xx-xx,年月日
@@ -28,6 +27,7 @@ class CalendarsController extends Controller
             $reserveDays = array_filter(array_combine($getDate, $getPart));
             foreach($reserveDays as $key => $value){
                 $reserve_settings = ReserveSettings::where('setting_reserve', $key)->where('setting_part', $value)->first();
+                // dd($reserve_settings); // setting_reserve,setting_part,limit_usersが配列
                 $reserve_settings->decrement('limit_users'); // limit_usersカラムの値を1つ減らす
                 $reserve_settings->users()->attach(Auth::id()); // 中間テーブルに保存する記述
             }
@@ -39,11 +39,14 @@ class CalendarsController extends Controller
     }
 
     public function delete(Request $request){
-        dd($request); // 値を減らすメソッドはincrement
+        // dd($request); // 値を減らすメソッドはincrement
         DB::beginTransaction();
         try{
             $getDate = $request->cancel_reserve;
             $getPart = $request->cancel_part;
+            $reserve_settings = ReserveSettings::where('setting_reserve', $getDate)->where('setting_part', $getPart)->first();
+            // dd($reserve_settings);
+            $reserve_settings->increment('limit_users');
         }catch(\Exception $e){
             DB::rollback();
         }
