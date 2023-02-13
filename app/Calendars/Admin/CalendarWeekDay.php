@@ -31,13 +31,13 @@ class CalendarWeekDay{
 
     $html[] = '<div class="text-left">';
     if($one_part){
-      $html[] = '<p class="day_part m-0 pt-1">1部'.$one_part->users->count().'</p>';
+      $html[] = '<p class="day_part m-0 pt-1">1部&emsp;'.$one_part->users->count().'</p>';
     }
     if($two_part){
-      $html[] = '<p class="day_part m-0 pt-1">2部'.$two_part->users->count().'</p>';
+      $html[] = '<p class="day_part m-0 pt-1">2部&emsp;'.$two_part->users->count().'</p>';
     }
     if($three_part){
-      $html[] = '<p class="day_part m-0 pt-1">3部'.$three_part->users->count().'</p>';
+      $html[] = '<p class="day_part m-0 pt-1">3部&emsp;'.$three_part->users->count().'</p>';
     }
     $html[] = '</div>';
 
