@@ -19,7 +19,7 @@ class CalendarsController extends Controller
         return view('authenticated.calendar.admin.calendar', compact('calendar'));
     }
 
-    public function reserveDetail($user_id = 0, $date, $part){ // まだ遷移先として示されていない
+    public function reserveDetail($user_id = 0, $date, $part){ // 'calendar.admin.detail'
         $reservePersons = ReserveSettings::with('users')->where('setting_reserve', $date)->where('setting_part', $part)->get();
         return view('authenticated.calendar.admin.reserve_detail', compact('reservePersons', 'date', 'part'));
     }

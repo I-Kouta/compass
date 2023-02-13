@@ -1,5 +1,5 @@
 @extends('layouts.sidebar')
-<!-- まだ遷移先として示されていない -->
+<!-- ルーティング名：'calendar.admin.detail' -->
 @section('content')
 <div class="vh-100 d-flex" style="align-items:center; justify-content:center;">
   <div class="w-50 m-auto h-75">

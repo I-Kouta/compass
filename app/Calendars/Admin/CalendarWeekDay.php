@@ -31,7 +31,7 @@ class CalendarWeekDay{
 
     $html[] = '<div class="text-left">';
     if($one_part){
-      $html[] = '<p class="day_part m-0 pt-1">1部&emsp;'.$one_part->users->count().'</p>';
+      $html[] = '<p class="day_part m-0 pt-1"><a href="/calendar/{id}/{data}/{part?}">1部</a>&emsp;'.$one_part->users->count().'</p>';
     }
     if($two_part){
       $html[] = '<p class="day_part m-0 pt-1">2部&emsp;'.$two_part->users->count().'</p>';
