@@ -30,14 +30,14 @@ class CalendarWeekDay{
     $three_part = ReserveSettings::with('users')->where('setting_reserve', $ymd)->where('setting_part', '3')->first();
 
     $html[] = '<div class="text-left">';
-    if($one_part){
-      $html[] = '<p class="day_part m-0 pt-1"><a href="/calendar/id/'.$ymd.'/1">1部</a>&emsp;'.$one_part->users->count().'</p>';
+    if($one_part){ // '/calendar/{id}/{data}/{part?}'
+      $html[] = '<p class="day_part m-0 pt-1"><a href="/calendar/'.$one_part->id.'/'.$ymd.'/1">1部</a>&emsp;'.$one_part->users->count().'</p>';
     }
     if($two_part){
-      $html[] = '<p class="day_part m-0 pt-1"><a href="/calendar/id/'.$ymd.'/2">2部</a>&emsp;'.$two_part->users->count().'</p>';
+      $html[] = '<p class="day_part m-0 pt-1"><a href="/calendar/'.$two_part->id.'/'.$ymd.'/2">2部</a>&emsp;'.$two_part->users->count().'</p>';
     }
     if($three_part){
-      $html[] = '<p class="day_part m-0 pt-1"><a href="/calendar/id/'.$ymd.'/3">3部</a>&emsp;'.$three_part->users->count().'</p>';
+      $html[] = '<p class="day_part m-0 pt-1"><a href="/calendar/'.$three_part->id.'/'.$ymd.'/3">3部</a>&emsp;'.$three_part->users->count().'</p>';
     }
     $html[] = '</div>';
 
