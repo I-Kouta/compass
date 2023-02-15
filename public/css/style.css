@@ -25,6 +25,7 @@ li{
 }
 .sidebar p a{
   color:#FFF;
+  text-decoration: none;
 }
 
 /* トップページ */
