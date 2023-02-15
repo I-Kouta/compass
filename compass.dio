@@ -1219,10 +1219,34 @@
         </mxGraphModel>
     </diagram>
     <diagram id="1mMovHQDI3QQS3m003Hp" name="foreach複数問題">
-        <mxGraphModel dx="642" dy="624" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="899" dy="657" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
+                <mxCell id="Gf_l0Ms4XQeCjY10OZSb-2" value="PostsController&lt;br&gt;&lt;div style=&quot;color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; line-height: 18px;&quot;&gt;&lt;span style=&quot;color: #9cdcfe;&quot;&gt;$posts&lt;/span&gt; = &lt;span style=&quot;color: #4ec9b0;&quot;&gt;Post&lt;/span&gt;::&lt;span style=&quot;color: #dcdcaa;&quot;&gt;with&lt;/span&gt;(&lt;span style=&quot;color: #ce9178;&quot;&gt;'user'&lt;/span&gt;)&lt;/div&gt;&lt;div style=&quot;color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; line-height: 18px;&quot;&gt;with内はメソッド&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="282" y="40" width="220" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="Gf_l0Ms4XQeCjY10OZSb-3" value="Postモデル・userメソッド&lt;br&gt;&lt;div style=&quot;color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; line-height: 18px;&quot;&gt;&lt;div style=&quot;line-height: 18px;&quot;&gt;&lt;span style=&quot;color: #c586c0;&quot;&gt;return&lt;/span&gt; &lt;span style=&quot;color: #569cd6;&quot;&gt;$this&lt;/span&gt;-&amp;gt;&lt;span style=&quot;color: #dcdcaa;&quot;&gt;belongsTo&lt;/span&gt;(&lt;span style=&quot;color: #ce9178;&quot;&gt;'App\Models\Users\User'&lt;/span&gt;);&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="282" y="120" width="380" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="cKmQnhnGqkDE2RKzRIsY-1" value="usersとpostsは一対多の関係" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="282" y="260" width="180" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="cKmQnhnGqkDE2RKzRIsY-2" value="Userモデル・postsメソッド&lt;br&gt;&lt;div style=&quot;color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; line-height: 18px;&quot;&gt;&lt;div style=&quot;line-height: 18px;&quot;&gt;&lt;div style=&quot;line-height: 18px;&quot;&gt;&lt;span style=&quot;color: #c586c0;&quot;&gt;return&lt;/span&gt; &lt;span style=&quot;color: #569cd6;&quot;&gt;$this&lt;/span&gt;-&amp;gt;&lt;span style=&quot;color: #dcdcaa;&quot;&gt;hasMany&lt;/span&gt;(&lt;span style=&quot;color: #ce9178;&quot;&gt;'App\Models\Posts\Post'&lt;/span&gt;);&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="282" y="198" width="360" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="cKmQnhnGqkDE2RKzRIsY-3" value="Controllerの記述" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="115" y="55" width="110" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="cKmQnhnGqkDE2RKzRIsY-4" value="Modelの記述&lt;br&gt;関係性" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="135" y="155" width="90" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="cKmQnhnGqkDE2RKzRIsY-5" value="Viewでの表示方法" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="120" y="320" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="cKmQnhnGqkDE2RKzRIsY-6" value="&lt;div style=&quot;color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; line-height: 18px;&quot;&gt;@foreach($posts as $post)&lt;/div&gt;&lt;div style=&quot;color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; line-height: 18px;&quot;&gt;&amp;nbsp;{{ $post-&amp;gt;user-&amp;gt;over_name }} // usesテーブルから&lt;/div&gt;&lt;div style=&quot;color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; line-height: 18px;&quot;&gt;&amp;nbsp;{{ $post-&amp;gt;post_title }} // postsテーブルから&lt;/div&gt;&lt;div style=&quot;color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; line-height: 18px;&quot;&gt;@endforeach&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="282" y="319" width="360" height="90" as="geometry"/>
+                </mxCell>
             </root>
         </mxGraphModel>
     </diagram>
