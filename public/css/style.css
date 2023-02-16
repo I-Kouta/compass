@@ -15,10 +15,11 @@ li{
 
 /* サイドバー */
 .sidebar{
-  width:180px;
+  width:200px;
   height:100vh;
   background-color:#03AAD2;
   font-weight:bold;
+  padding-left: 10px;
 }
 .main-container{
   width:100%;
@@ -32,6 +33,7 @@ li{
 }
 .sidebar p a{
   color:#FFF;
+  margin-left: 10px;
   text-decoration: none;
 }
 
