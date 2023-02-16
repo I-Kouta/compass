@@ -15,7 +15,7 @@ li{
 
 /* サイドバー */
 .sidebar{
-  width:150px;
+  width:180px;
   height:100vh;
   background-color:#03AAD2;
   font-weight:bold;
@@ -25,6 +25,7 @@ li{
 }
 .sidebar p:hover{
   background-color: #1d68a7;
+  padding-left: 20px;
 }
 .sidebar p a{
   color:#FFF;
