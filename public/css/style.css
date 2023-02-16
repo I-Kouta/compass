@@ -23,6 +23,9 @@ li{
 .main-container{
   width:100%;
 }
+.sidebar p:hover{
+  background-color: #1d68a7;
+}
 .sidebar p a{
   color:#FFF;
   text-decoration: none;
