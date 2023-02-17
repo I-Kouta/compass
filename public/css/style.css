@@ -122,6 +122,9 @@ li{
   background:#FFF;
   border-radius:10px;
 }
+.post_area:hover{
+  background: rgba(245, 245, 245, 0.3);
+}
 .post_bottom_area{
   justify-content: space-between;
 }
