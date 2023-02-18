@@ -103,6 +103,15 @@ li{
 }
 
 /* 掲示板 */
+.new_post{
+  width: 80%;
+  background: #0000FF;
+  text-align: center;
+}
+.new_post a{
+  color: #FFF;
+}
+
 .sub_categories{
   display:none;
 }
