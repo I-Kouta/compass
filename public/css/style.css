@@ -123,6 +123,7 @@ li{
   border-radius:10px;
 }
 .post_area:hover{
+  transition: .3s;
   background: rgba(245, 245, 245, 0.3);
 }
 .post_bottom_area{
@@ -213,16 +214,27 @@ li{
   padding: 5px;
   border-radius: 20px;
 }
+
 .like_post{
+  background: linear-gradient(to left, rgba(217, 76, 122, 0.7), rgba(225, 115, 151, 0.7));
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.like_post:hover{
   background: linear-gradient(to left, rgba(217, 76, 122), rgba(225, 115, 151));
-  padding: 5px;
-  border-radius: 5px;
 }
+
 .my_post{
-  background: linear-gradient(to left, #e1951a, #eeb12e);;
+  background: linear-gradient(to left, rgba(225, 149, 26, 0.7), rgba(238, 177, 46, 0.7));
   padding: 5px;
   border-radius: 5px;
 }
+
+.my_post:hover{
+  background: linear-gradient(to left, rgba(225, 149, 26), rgba(238, 177, 46));
+}
+
 .main_categories span,
 .sub_categories li input{
   list-style:none;
