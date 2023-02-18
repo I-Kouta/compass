@@ -17,17 +17,17 @@
 
 <body class="all_content">
   <div class="d-flex">
-    <div class="sidebar">
+    <div class="sidebar"><!-- sidebar, sidebar-name="" -->
       @section('sidebar')
-      <p><i class="fas fa-home fa-lg" style="color:#f0f8ff;"></i><a href="{{ route('top.show') }}">トップ</a></p>
-      <p><i class="fas fa-check fa-lg" style="color:#f0f8ff;"></i><a href="/logout">ログアウト</a></p>
-      <p><i class="far fa-calendar-check fa-lg" style="color:#f0f8ff;"></i><a href="{{ route('calendar.general.show',['user_id' => Auth::id()]) }}">スクール予約</a></p>
+      <p sidebar-name="top"><i class="fas fa-home fa-lg" style="color:#f0f8ff;"></i><a href="{{ route('top.show') }}">トップ</a></p>
+      <p sidebar-name="logout"><i class="fas fa-check fa-lg" style="color:#f0f8ff;"></i><a href="/logout">ログアウト</a></p>
+      <p sidebar-name="school-reserve"><i class="far fa-calendar-check fa-lg" style="color:#f0f8ff;"></i><a href="{{ route('calendar.general.show',['user_id' => Auth::id()]) }}">スクール予約</a></p>
       @if (Auth::user()->role != 4)
-      <p><i class="fas fa-calendar-day fa-lg" style="color:#f0f8ff;"></i><a href="{{ route('calendar.admin.show',['user_id' => Auth::id()]) }}">スクール予約確認</a></p>
-      <p><i class="far fa-calendar-alt fa-lg" style="color:#f0f8ff;"></i><a href="{{ route('calendar.admin.setting',['user_id' => Auth::id()]) }}">スクール枠登録</a></p>
+      <p sidebar-name="school-check"><i class="fas fa-calendar-day fa-lg" style="color:#f0f8ff;"></i><a href="{{ route('calendar.admin.show',['user_id' => Auth::id()]) }}">スクール予約確認</a></p>
+      <p sidebar-name="school-registration"><i class="far fa-calendar-alt fa-lg" style="color:#f0f8ff;"></i><a href="{{ route('calendar.admin.setting',['user_id' => Auth::id()]) }}">スクール枠登録</a></p>
       @endif
-      <p><i class="far fa-comment-dots fa-lg" style="color:#f0f8ff;"></i><a href="{{ route('post.show') }}">掲示板</a></p>
-      <p><i class="fas fa-search fa-lg" style="color:#f0f8ff;"></i><a href="{{ route('user.show') }}">ユーザー検索</a></p>
+      <p sidebar-name="bulletin-board"><i class="far fa-comment-dots fa-lg" style="color:#f0f8ff;"></i><a href="{{ route('post.show') }}">掲示板</a></p>
+      <p sidebar-name="user-search"><i class="fas fa-search fa-lg" style="color:#f0f8ff;"></i><a href="{{ route('user.show') }}">ユーザー検索</a></p>
       @show
     </div>
     <div class="main-container">
