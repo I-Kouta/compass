@@ -202,12 +202,26 @@ li{
 }
 .category_btn{
   font-size:12px;
-  border-radius:5px;
-  padding:0 5px;/* 内側幅もボタンごとに調整 */
+  /* 内側幅もボタンごとに調整 */
   border:none;
-  background:#999; /* 背景色は別クラスに移行、高さも */
+  /* 背景色は別クラスに移行、高さも */
   color:#FFF;
   cursor: pointer;
+}
+.sub_category_btn{
+  background: red;
+  padding: 5px;
+  border-radius: 20px;
+}
+.like_post{
+  background: blue;
+  padding: 5px;
+  border-radius: 5px;
+}
+.my_post{
+  background: green;
+  padding: 5px;
+  border-radius: 5px;
 }
 .main_categories span,
 .sub_categories li input{

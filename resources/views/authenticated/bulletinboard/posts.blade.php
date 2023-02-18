@@ -24,7 +24,7 @@
         </div>
       </div>
       @foreach($post->subCategories as $category)
-      <span class="category_btn">{{ $category->sub_category }}</span>
+      <span class="category_btn sub_category_btn">{{ $category->sub_category }}</span>
       @endforeach
     </div>
     @endforeach
@@ -36,8 +36,8 @@
         <input type="text" placeholder="キーワードを検索" name="keyword" form="postSearchRequest">
         <input type="submit" value="検索" form="postSearchRequest">
       </div>
-      <input type="submit" name="like_posts" class="category_btn" value="いいねした投稿" form="postSearchRequest">
-      <input type="submit" name="my_posts" class="category_btn" value="自分の投稿" form="postSearchRequest">
+      <input type="submit" name="like_posts" class="category_btn like_post" value="いいねした投稿" form="postSearchRequest">
+      <input type="submit" name="my_posts" class="category_btn my_post" value="自分の投稿" form="postSearchRequest">
       <ul>
         @foreach($categories as $category)
         <li class="main_categories" category_id="{{ $category->id }}">
