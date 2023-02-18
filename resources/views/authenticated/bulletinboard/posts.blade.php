@@ -11,7 +11,9 @@
         <span class="ml-3">{{ $post->user->under_name }}</span>さん
         <span class="post-date">{{ $post->created_at }}</span>
       </p>
-      <p><a href="{{ route('post.detail', ['id' => $post->id]) }}">{{ $post->post_title }}</a></p>
+      <p>
+        <a href="{{ route('post.detail', ['id' => $post->id]) }}">{{ $post->post_title }}</a>
+      </p>
       <div class="post_bottom_area d-flex">
         <div class="d-flex post_status">
           <div class="mr-5">

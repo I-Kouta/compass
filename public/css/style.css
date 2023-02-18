@@ -148,6 +148,10 @@ li{
   background: rgba(245, 245, 245, 0.3);
 }
 
+.post_area p a{
+  display: block;
+}
+
 .post_bottom_area{
   justify-content: space-between;
 }

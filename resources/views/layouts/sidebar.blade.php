@@ -17,7 +17,7 @@
 
 <body class="all_content">
   <div class="d-flex">
-    <div class="sidebar"><!-- sidebar, sidebar-name="" -->
+    <div class="sidebar">
       @section('sidebar')
       <p sidebar-name="top"><i class="fas fa-home fa-lg" style="color:#f0f8ff;"></i><a href="{{ route('top.show') }}">トップ</a></p>
       <p sidebar-name="logout"><i class="fas fa-check fa-lg" style="color:#f0f8ff;"></i><a href="/logout">ログアウト</a></p>
