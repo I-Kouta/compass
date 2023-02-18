@@ -115,6 +115,11 @@ li{
   color: #FFF;
 }
 
+.post-date{
+  font-size: 10px;
+  margin-left: 160px;
+}
+
 .new_post:hover{
   background: linear-gradient(to left, rgba(10, 153, 202), rgba(0, 180, 219));
 }
