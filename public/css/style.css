@@ -203,9 +203,7 @@ li{
 }
 .category_btn{
   font-size:12px;
-  /* 内側幅もボタンごとに調整 */
   border:none;
-  /* 背景色は別クラスに移行、高さも */
   color:#FFF;
   cursor: pointer;
 }
@@ -213,6 +211,10 @@ li{
   background: rgba(169, 169, 169);
   padding: 5px;
   border-radius: 20px;
+}
+
+.button_area{
+  margin: 10px auto 20px auto;
 }
 
 .like_post{
@@ -234,7 +236,9 @@ li{
 .my_post:hover{
   background: linear-gradient(to left, rgba(225, 149, 26), rgba(238, 177, 46));
 }
-
+.main_categories{
+  margin-top: 10px;
+}
 .main_categories span,
 .sub_categories li input{
   list-style:none;
