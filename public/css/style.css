@@ -105,11 +105,18 @@ li{
 /* 掲示板 */
 .new_post{
   width: 80%;
-  background: #0000FF;
+  background: linear-gradient(to left, rgba(10, 153, 202, 0.8), rgba(0, 180, 219, 0.8));
   text-align: center;
+  padding: 5px;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
 .new_post a{
   color: #FFF;
+}
+
+.new_post:hover{
+  background: linear-gradient(to left, rgba(10, 153, 202), rgba(0, 180, 219));
 }
 
 .sub_categories{
@@ -128,7 +135,7 @@ li{
   background:#FFF;
 }
 .post_area{
-  background: rgba(245, 245, 245, 1);
+  background: rgba(245, 245, 245);
   border-radius:10px;
 }
 .post_area:hover{
