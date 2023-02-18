@@ -318,6 +318,12 @@ li{
   width:250px;
   height:250px;
 }
+.one_person a{
+  display: block;
+}
+.one_person:hover{
+  background: rgba(243, 246, 244, 0.8);
+}
 .search_conditions span{
   cursor:pointer;
 }
