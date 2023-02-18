@@ -113,6 +113,7 @@ li{
 }
 .new_post a{
   color: #FFF;
+  display: block;
 }
 
 .post-date{
