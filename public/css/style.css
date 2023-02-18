@@ -209,17 +209,17 @@ li{
   cursor: pointer;
 }
 .sub_category_btn{
-  background: red;
+  background: rgba(169, 169, 169);
   padding: 5px;
   border-radius: 20px;
 }
 .like_post{
-  background: blue;
+  background: linear-gradient(to left, rgba(217, 76, 122), rgba(225, 115, 151));
   padding: 5px;
   border-radius: 5px;
 }
 .my_post{
-  background: green;
+  background: linear-gradient(to left, #e1951a, #eeb12e);;
   padding: 5px;
   border-radius: 5px;
 }
