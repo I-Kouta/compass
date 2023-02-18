@@ -119,7 +119,7 @@ li{
   background:#FFF;
 }
 .post_area{
-  background:#FFF;
+  background: rgba(245, 245, 245, 1);
   border-radius:10px;
 }
 .post_area:hover{
@@ -203,7 +203,7 @@ li{
 .category_btn{
   font-size:12px;
   border-radius:5px;
-  padding:0 5px;
+  padding:0 5px;/* 内側幅もボタンごとに調整 */
   border:none;
   background:#999; /* 背景色は別クラスに移行、高さも */
   color:#FFF;
