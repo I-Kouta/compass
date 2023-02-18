@@ -142,6 +142,7 @@ li{
   transition: .3s;
   background: rgba(245, 245, 245, 0.3);
 }
+
 .post_bottom_area{
   justify-content: space-between;
 }
