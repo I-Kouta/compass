@@ -39,7 +39,7 @@ class PostFormRequest extends FormRequest
             'post_title.max' => 'タイトルは100文字以内で入力してください。',
             'post_body.required' => '内容の入力は必須です。',
             'post_body.string' => '形式が異なります。',
-            'post_body.max' => '投稿内容は5000以内で入力してください。',
+            'post_body.max' => '投稿内容は5000文字以内で入力してください。',
         ];
     }
 }
